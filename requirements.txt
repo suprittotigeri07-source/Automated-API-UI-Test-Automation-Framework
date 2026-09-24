@@ -1,0 +1,27 @@
+# Core Test Framework
+pytest>=8.0.0
+pytest-xdist>=3.5.0
+pytest-html>=4.1.0
+pytest-timeout>=2.3.0
+
+# API Automation & Backend Server
+requests>=2.31.0
+httpx>=0.27.0
+pydantic>=2.6.0
+fastapi>=0.110.0
+uvicorn>=0.28.0
+
+# UI Automation
+playwright>=1.42.0
+
+# Environment Configuration
+python-dotenv>=1.0.1
+
+# Reporting
+allure-pytest>=2.13.2
+
+# Code Quality & Formatting
+ruff>=0.3.0
+black>=24.2.0
+mypy>=1.8.0
+types-requests>=2.31.0.20240125

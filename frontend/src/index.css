@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #3D52A0;
+  --color-primary-blue: #7091E6;
+  --color-primary-muted: #8697C4;
+  --color-primary-light: #ADBBDA;
+  --color-primary-lavender: #EDE8F5;
+  --color-app-bg: #F8F9FC;
+  --color-card-white: #FFFFFF;
+  --color-text-dark: #172033;
+  --color-text-secondary: #5F6B85;
+  --color-status-success: #22A06B;
+  --color-status-warning: #D99A24;
+  --color-status-error: #D64545;
+}
+
+:root {
+  --primary-dark: #3D52A0;
+  --primary-blue: #7091E6;
+  --primary-muted: #8697C4;
+  --primary-light: #ADBBDA;
+  --primary-lavender: #EDE8F5;
+  --app-bg: #F8F9FC;
+  --card-white: #FFFFFF;
+  --text-dark: #172033;
+  --text-secondary: #5F6B85;
+  --status-success: #22A06B;
+  --status-warning: #D99A24;
+  --status-error: #D64545;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--app-bg);
+  color: var(--text-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for Code and Tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ADBBDA;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8697C4;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}

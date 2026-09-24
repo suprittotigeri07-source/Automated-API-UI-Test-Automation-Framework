@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automated-api-ui-test-framework"
+version = "0.1.0"
+description = "Production-Grade Automated API & UI Test Automation Framework"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest>=8.0.0",
+    "pytest-xdist>=3.5.0",
+    "pytest-html>=4.1.0",
+    "pytest-timeout>=2.3.0",
+    "requests>=2.31.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.6.0",
+    "playwright>=1.42.0",
+    "python-dotenv>=1.0.1",
+    "allure-pytest>=2.13.2",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "N"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-ra -q --import-mode=importlib"
+markers = [
+    "smoke: Smoke tests for core functionality",
+    "regression: Regression test suite",
+    "api: API level tests",
+    "ui: UI level tests",
+    "integration: Integration tests",
+    "e2e: End-to-end user workflow tests",
+    "critical: Critical path tests",
+]
